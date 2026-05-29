@@ -1159,6 +1159,299 @@ p { margin: 0; }
 .float-cta.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .float-cta:hover { background: var(--fg); }
 
+/* ===== Price Intro ===== */
+.price-intro {
+  text-align: center;
+  font-size: 15px;
+  color: var(--fg-2);
+  max-width: 680px;
+  margin: -24px auto 40px;
+  line-height: 2;
+}
+
+/* ===== Combo Banner ===== */
+.combo-banner {
+  background: var(--dark);
+  color: var(--bg);
+  border-radius: 8px;
+  padding: clamp(32px, 5vw, 56px);
+  margin: 0 0 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.combo-head { text-align: center; }
+.combo-en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 26px);
+  letter-spacing: 0.1em;
+  color: var(--accent-soft);
+  display: block;
+  margin-bottom: 12px;
+}
+.combo-title {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  font-size: clamp(22px, 3.2vw, 36px);
+  line-height: 1.5;
+  margin: 0;
+  color: var(--bg);
+}
+.combo-title em { color: var(--accent-soft); font-style: normal; }
+.combo-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 16px;
+}
+.combo-item {
+  background: color-mix(in oklch, var(--bg), transparent 90%);
+  border: 1px solid color-mix(in oklch, var(--bg), transparent 80%);
+  border-radius: 6px;
+  padding: 28px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.combo-item.combo-result {
+  background: color-mix(in oklch, var(--accent), transparent 80%);
+  border-color: var(--accent-soft);
+}
+.combo-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--accent-soft);
+}
+.combo-label {
+  font-family: var(--font-jp-serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--bg);
+}
+.combo-desc {
+  font-size: 12px;
+  color: color-mix(in oklch, var(--bg), transparent 30%);
+  line-height: 1.7;
+}
+.combo-plus, .combo-eq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-en-serif);
+  font-size: 28px;
+  color: var(--accent-soft);
+}
+.combo-note {
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+  color: color-mix(in oklch, var(--bg), transparent 20%);
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in oklch, var(--bg), transparent 80%);
+}
+.combo-note strong { color: var(--accent-soft); font-weight: 500; }
+.sp-br { display: none; }
+
+/* ===== Trial Banner ===== */
+.trial-banner {
+  margin-top: 48px;
+  background: var(--accent);
+  color: var(--paper);
+  border-radius: 8px;
+  padding: clamp(32px, 4vw, 52px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.trial-banner::before {
+  content: "PILATES";
+  position: absolute;
+  right: -2%;
+  bottom: -32%;
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: clamp(120px, 18vw, 240px);
+  line-height: 1;
+  color: color-mix(in oklch, var(--paper), transparent 92%);
+  pointer-events: none;
+  z-index: 0;
+}
+.trial-left { position: relative; z-index: 1; }
+.trial-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: color-mix(in oklch, var(--paper), transparent 25%);
+  display: block;
+  margin-bottom: 16px;
+}
+.trial-copy {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  font-size: clamp(26px, 3.6vw, 40px);
+  line-height: 1.4;
+  margin: 0 0 12px;
+  color: var(--paper);
+}
+.trial-sub {
+  font-size: 14px;
+  color: color-mix(in oklch, var(--paper), transparent 20%);
+  margin: 0;
+}
+.trial-price {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: color-mix(in oklch, var(--paper), transparent 90%);
+  border: 1px solid color-mix(in oklch, var(--paper), transparent 75%);
+  border-radius: 8px;
+  padding: 28px 36px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.trial-tag {
+  font-family: var(--font-jp-serif);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  background: var(--paper);
+  color: var(--accent);
+  padding: 5px 16px;
+  border-radius: 999px;
+}
+.trial-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-en-serif);
+  color: var(--paper);
+}
+.trial-yen { font-size: 28px; }
+.trial-num {
+  font-size: clamp(56px, 8vw, 80px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.trial-tax {
+  font-family: var(--font-jp-sans);
+  font-size: 12px;
+  color: color-mix(in oklch, var(--paper), transparent 30%);
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.trial-btn {
+  background: var(--paper) !important;
+  color: var(--accent) !important;
+  width: 100%;
+  justify-content: center;
+}
+.trial-btn:hover { background: var(--fg) !important; color: var(--paper) !important; transform: translateY(-2px); }
+
+/* ===== Price Amount "from" ===== */
+.price-amount .from {
+  font-family: var(--font-jp-serif);
+  font-size: 12px;
+  color: var(--fg-3);
+  align-self: center;
+  margin-right: 4px;
+}
+.price-card.pop .price-amount .from { color: color-mix(in oklch, var(--bg), transparent 40%); }
+
+/* ===== LINE CTA card ===== */
+.line-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line-card {
+  width: 100%;
+  background: var(--paper);
+  border-radius: 6px;
+  padding: clamp(32px, 4vw, 48px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.line-badge {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: #06C755;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin-bottom: 4px;
+}
+.line-card h3 {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--fg);
+  margin: 0;
+}
+.line-card > p {
+  font-size: 14px;
+  color: var(--fg-2);
+  margin: 0 0 12px;
+  line-height: 1.9;
+}
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 340px;
+  background: #06C755;
+  color: #fff;
+  padding: 18px 28px;
+  border-radius: 999px;
+  font-family: var(--font-jp-serif);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  transition: transform .2s, filter .2s;
+}
+.btn-line:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.line-mark { display: inline-flex; }
+.line-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--fg-3);
+}
+
+/* ===== Responsive combo/trial ===== */
+@media (max-width: 860px) {
+  .combo-flow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .combo-plus, .combo-eq { font-size: 22px; transform: rotate(90deg); }
+  .sp-br { display: inline; }
+}
+@media (max-width: 720px) {
+  .trial-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 28px;
+  }
+  .trial-left { display: flex; flex-direction: column; align-items: center; }
+  .trial-price { align-items: center; }
+}
+
 /* ===== Responsive 960px ===== */
 @media (max-width: 960px) {
   .nav-desktop { display: none; }
@@ -1315,9 +1608,9 @@ p { margin: 0; }
       <span>1&nbsp;min&nbsp;from&nbsp;Itabashi&nbsp;Sta.</span>
     </p>
     <p class="hero-lead-v2">
-      国家資格保有のトレーナーによる完全マンツーマン指導と、<br>
-      身体の軸を根本から整えるマシンピラティスを融合。<br>
-      <strong>「鍛える」と「整える」を、一回のセッションで。</strong><br>
+      経験豊富なトレーナーによる完全マンツーマン指導と、
+      身体の軸を根本から整えるピラティスを融合。<br>
+      <strong>「鍛える」と「整える」を、一回のセッションで。</strong>
       続けるほどに、姿勢も体力も、人生のリズムまで変わっていきます。
     </p>
     <div class="hero-ctas">
@@ -1355,7 +1648,7 @@ p { margin: 0; }
       <div class="m-num">04</div>
       <div class="m-body">
         <span class="m-k">手ぶらで通える</span>
-        <span class="m-v">ウェア・タオル・ソックス・シャワー完備。</span>
+        <span class="m-v">ウェア・タオル・シューズのレンタルあり。</span>
       </div>
     </div>
   </div>
@@ -1431,19 +1724,19 @@ p { margin: 0; }
       <div class="reason-num">02</div>
       <div class="reason-en">Personal × Pilates</div>
       <h3 class="reason-jp">「鍛える」と「整える」を同時に</h3>
-      <p>ダイエットやボディメイクだけでも、ケア・ストレッチだけでもない。マシンピラティスとパーソナルを融合させ、体を作りながら身体軸を整える独自メソッド。</p>
+      <p>ダイエットやボディメイクだけでも、ケア・ストレッチだけでもない。ピラティスとパーソナルを融合させ、体を作りながら身体軸を整える独自メソッド。</p>
     </article>
     <article class="reason-card">
       <div class="reason-num">03</div>
-      <div class="reason-en">Certified</div>
-      <h3 class="reason-jp">両方資格保有のトレーナー</h3>
-      <p>国際ピラティス資格とパーソナルトレーナー資格を両方保有したプロのみが指導。「とりあえず動かす」ではなく、ロジックを持ってゴールまで伴走します。</p>
+      <div class="reason-en">Experienced</div>
+      <h3 class="reason-jp">経験豊富なトレーナー</h3>
+      <p>ボディメイク・姿勢改善・リハビリまで、多くのクライアントを担当してきたトレーナーが指導。「とりあえず動かす」ではなく、ロジックを持ってゴールまで伴走します。</p>
     </article>
     <article class="reason-card">
       <div class="reason-num">04</div>
       <div class="reason-en">1 min Access</div>
       <h3 class="reason-jp">板橋駅 徒歩1分の好立地</h3>
-      <p>仕事帰り・お買い物のついでで、無理なく進める「もう一度」。ウェア・タオル・ソックス・シャワー完備で、手ぶらで通えるところも継続を支えます。</p>
+      <p>仕事帰り・お買い物のついでで、無理なく進める「もう一度」。ウェア・タオル・シューズのレンタルもあり、手ぶらで通えるところも継続を支えます。</p>
     </article>
   </div>
 </section>
@@ -1541,67 +1834,127 @@ p { margin: 0; }
     <span class="section-en">Price</span>
   </div>
   <h2 class="section-h2 center">
-    続けやすい、<br>
-    <em>3つの</em>料金プラン
+    ライフスタイルで選び、<br>
+    <em>組み合わせて</em>使える
   </h2>
-  <div class="price-grid">
-    <article class="price-card">
-      <div class="price-tag">LIGHT</div>
-      <h3 class="price-jp">月4プラン</h3>
-      <p class="price-body">週1回ペース。まずは習慣化から。</p>
-      <div class="price-amount">
-        <span class="yen">¥</span>
-        <span class="num">12,800</span>
-        <span class="per">/月</span>
+  <p class="price-intro">
+    定額プラン・回数券・グループプランは自由に組み合わせてご利用いただけます。<br>
+    パーソナルトレーニングとピラティス、その日の目的に合わせてセッションを選べます。
+  </p>
+
+  <div class="combo-banner">
+    <div class="combo-head">
+      <span class="combo-en">Personal × Pilates</span>
+      <h3 class="combo-title">
+        <em>パーソナル</em>も<em>ピラティス</em>も、<br class="sp-br">同じプランで自由に組み合わせ。
+      </h3>
+    </div>
+    <div class="combo-flow">
+      <div class="combo-item">
+        <span class="combo-tag">PERSONAL</span>
+        <span class="combo-label">鍛える</span>
+        <span class="combo-desc">マンツーマンで体づくり・ボディメイク</span>
       </div>
-      <small class="tax">税込／月会費</small>
-      <ul class="price-feats">
-        <li><span class="price-check">✓</span>月4回まで</li>
-        <li><span class="price-check">✓</span>全クラス参加可</li>
-        <li><span class="price-check">✓</span>施設レンタル無料</li>
-      </ul>
-      <a href="#reserve" class="btn-block">このプランで予約</a>
-    </article>
+      <div class="combo-plus">＋</div>
+      <div class="combo-item">
+        <span class="combo-tag">PILATES</span>
+        <span class="combo-label">整える</span>
+        <span class="combo-desc">姿勢・体幹・しなやかさを引き出す</span>
+      </div>
+      <div class="combo-eq">＝</div>
+      <div class="combo-item combo-result">
+        <span class="combo-tag">YOUR PLAN</span>
+        <span class="combo-label">あなただけの配分</span>
+        <span class="combo-desc">回数も内容も、その都度えらべる</span>
+      </div>
+    </div>
+    <p class="combo-note">
+      例）今月は<strong>パーソナル2回＋ピラティス2回</strong>。来月は気分で<strong>ピラティス中心</strong>に。
+      わざわざ別契約は不要。1つのプランの中で、自由に行き来できます。
+    </p>
+  </div>
+
+  <div class="price-grid">
     <article class="price-card pop">
       <div class="popular">人気No.1</div>
-      <div class="price-tag">REGULAR</div>
-      <h3 class="price-jp">月8プラン</h3>
-      <p class="price-body">もっとも人気。週2で着実に変化。</p>
+      <div class="price-tag">MONTHLY</div>
+      <h3 class="price-jp">定額プラン</h3>
+      <p class="price-body">毎月2・4・6・8回から自由に選べる定額制。続けるほどお得。</p>
       <div class="price-amount">
+        <span class="from">月額</span>
         <span class="yen">¥</span>
-        <span class="num">21,800</span>
+        <span class="num">32,560</span>
         <span class="per">/月</span>
       </div>
-      <small class="tax">税込／月会費</small>
+      <small class="tax">税込／4回コースの場合</small>
       <ul class="price-feats">
-        <li><span class="price-check">✓</span>月8回まで</li>
-        <li><span class="price-check">✓</span>全クラス参加可</li>
-        <li><span class="price-check">✓</span>施設レンタル無料</li>
-        <li><span class="price-check">✓</span>ゲスト同伴1回/月</li>
+        <li><span class="price-check">✓</span>1回あたり ¥7,590〜（60分）</li>
+        <li><span class="price-check">✓</span>毎月の回数を自由に変更可</li>
+        <li><span class="price-check">✓</span>30分4回プランも選択可</li>
+        <li><span class="price-check">✓</span>最低契約期間3ヶ月</li>
       </ul>
-      <a href="#reserve" class="btn-block">このプランで予約</a>
+      <a href="#reserve" class="btn-block">このプランで相談する</a>
     </article>
     <article class="price-card">
-      <div class="price-tag">UNLIMITED</div>
-      <h3 class="price-jp">通い放題</h3>
-      <p class="price-body">本気で結果を出したい方へ。</p>
+      <div class="price-tag">TICKET</div>
+      <h3 class="price-jp">回数券プラン</h3>
+      <p class="price-body">自分のペースで通いたい方へ。有効期限2ヶ月。</p>
       <div class="price-amount">
+        <span class="from">月額</span>
         <span class="yen">¥</span>
-        <span class="num">32,800</span>
-        <span class="per">/月</span>
+        <span class="num">36,300</span>
       </div>
-      <small class="tax">税込／月会費</small>
+      <small class="tax">税込／4回券の場合</small>
       <ul class="price-feats">
-        <li><span class="price-check">✓</span>回数無制限</li>
-        <li><span class="price-check">✓</span>全クラス参加可</li>
-        <li><span class="price-check">✓</span>施設レンタル無料</li>
-        <li><span class="price-check">✓</span>ゲスト同伴2回/月</li>
-        <li><span class="price-check">✓</span>オンラインクラス込</li>
+        <li><span class="price-check">✓</span>4回券 ¥36,300（1回 ¥9,075）</li>
+        <li><span class="price-check">✓</span>8回券 ¥68,200（1回 ¥8,525）</li>
+        <li><span class="price-check">✓</span>好きなタイミングで消化</li>
+        <li><span class="price-check">✓</span>定額プランと組み合わせOK</li>
       </ul>
-      <a href="#reserve" class="btn-block">このプランで予約</a>
+      <a href="#reserve" class="btn-block">このプランで相談する</a>
+    </article>
+    <article class="price-card">
+      <div class="price-tag">GROUP</div>
+      <h3 class="price-jp">グループプラン</h3>
+      <p class="price-body">ペア・トリオでさらにお得に。ご友人やご夫婦で。</p>
+      <div class="price-amount">
+        <span class="from">月額</span>
+        <span class="yen">¥</span>
+        <span class="num">13,200</span>
+      </div>
+      <small class="tax">税込／ペア2人利用の場合</small>
+      <ul class="price-feats">
+        <li><span class="price-check">✓</span>ペア2人利用 ¥13,200（1人 ¥6,600）</li>
+        <li><span class="price-check">✓</span>トリプル3人利用 ¥16,500（1人 ¥5,500）</li>
+        <li><span class="price-check">✓</span>ペア4回券2人利用 ¥48,000</li>
+        <li><span class="price-check">✓</span>パーソナルストレッチ 30分 ¥4,950〜</li>
+      </ul>
+      <a href="#reserve" class="btn-block">このプランで相談する</a>
     </article>
   </div>
-  <p class="price-note">※入会金 ¥11,000 ／ 事務手数料 ¥5,500 ／ 体験当日のご入会で入会金が無料になります。</p>
+  <p class="price-note">※入会後1ヶ月間、食事指導込み。当日入会キャンペーン等の詳細はカウンセリング時にご案内します。<br>※定額コースは最低契約期間3ヶ月、月をまたぐ残数の繰越しはできません。回数券の有効期限は2ヶ月です。</p>
+
+  <div class="trial-banner">
+    <div class="trial-left">
+      <span class="trial-eyebrow">FIRST TRIAL — 初回体験</span>
+      <p class="trial-copy">
+        まずは気軽に<br class="sp-br">体験セッションから。
+      </p>
+      <p class="trial-sub">パーソナル × ピラティスを、たっぷり約60分。</p>
+    </div>
+    <div class="trial-price">
+      <span class="trial-tag">初回限定</span>
+      <div class="trial-amount">
+        <span class="trial-yen">¥</span>
+        <span class="trial-num">3,000</span>
+        <span class="trial-tax">税込</span>
+      </div>
+      <a href="#reserve" class="btn-primary trial-btn">
+        <span>体験を予約する</span>
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- ===== Flow ===== -->
@@ -1619,7 +1972,7 @@ p { margin: 0; }
       <div class="flow-n">01</div>
       <div class="flow-body">
         <h3>ご予約</h3>
-        <p>フォームまたはお電話で、ご希望の日時をお選びください。</p>
+        <p>公式LINEまたはお電話で、ご希望の日時をお選びください。</p>
       </div>
       <div class="flow-line" aria-hidden="true"></div>
     </li>
@@ -1627,15 +1980,15 @@ p { margin: 0; }
       <div class="flow-n">02</div>
       <div class="flow-body">
         <h3>カウンセリング</h3>
-        <p>現在の体の状態・目標をヒアリング（15分）。</p>
+        <p>現在の体の状態・目標をヒアリング。お悩みをお聞かせください。</p>
       </div>
       <div class="flow-line" aria-hidden="true"></div>
     </li>
     <li>
       <div class="flow-n">03</div>
       <div class="flow-body">
-        <h3>体験レッスン</h3>
-        <p>リフォーマーを使った60分のクラスを実際に体験。</p>
+        <h3>体験セッション</h3>
+        <p>パーソナル×ピラティスのセッションを実際に体験（約60分）。</p>
       </div>
       <div class="flow-line" aria-hidden="true"></div>
     </li>
@@ -1643,7 +1996,7 @@ p { margin: 0; }
       <div class="flow-n">04</div>
       <div class="flow-body">
         <h3>アフター</h3>
-        <p>今後の通い方・プラン選びをご相談。当日入会で入会金無料。</p>
+        <p>今後の通い方・プランの組み合わせをご相談いただけます。</p>
       </div>
     </li>
   </ol>
@@ -1724,7 +2077,7 @@ p { margin: 0; }
       </button>
       <div class="faq-a">
         <span class="faq-mark">A</span>
-        <span>はい、ご安心ください。会員様の8割は運動初心者からのスタートです。マシンの抵抗が動きを補助してくれるため、ハードな筋トレが苦手な方にも適しています。</span>
+        <span>はい、ご安心ください。会員様の8割は運動初心者からのスタートです。マンツーマンだからこそ、あなたのペースに合わせて丁寧に進めていきます。</span>
       </div>
     </div>
     <div class="faq-item">
@@ -1735,7 +2088,7 @@ p { margin: 0; }
       </button>
       <div class="faq-a">
         <span class="faq-mark">A</span>
-        <span>動きやすい服装と滑り止め付きの靴下のみ。ウェアレンタル、靴下販売、シャワー（一部店舗）もご用意しています。</span>
+        <span>動きやすい服装と滑り止め付きの靴下のみ。ウェア・タオル・シューズのレンタルもご用意していますので、手ぶらでもお越しいただけます。</span>
       </div>
     </div>
     <div class="faq-item">
@@ -1794,87 +2147,50 @@ p { margin: 0; }
         <span class="section-en">Reserve</span>
       </div>
       <h2 class="section-h2 light">
-        体験レッスン<br>
-        <em>予約フォーム</em>
+        まずは<em>LINE</em>で<br>
+        体験のご相談を
       </h2>
       <p class="reserve-lead">
-        60分の体験レッスンを<strong>¥2,200（税込）</strong>でご案内します。<br>
-        当日のご入会で<strong>入会金 ¥11,000 が無料</strong>になります。
+        ご予約・ご質問は<strong>公式LINE</strong>から、かんたん30秒。<br>
+        ご希望の日時やお悩みをお送りいただければ、<br>
+        担当より体験レッスンのご案内をいたします。
       </p>
       <dl class="reserve-meta">
         <div>
           <dt>所要時間</dt>
-          <dd>カウンセリング15分 ＋ レッスン60分</dd>
+          <dd>カウンセリング ＋ 体験セッション（約60分）</dd>
         </div>
         <div>
           <dt>持ち物</dt>
-          <dd>動きやすい服装／滑り止め靴下</dd>
+          <dd>動きやすい服装／滑り止め靴下（レンタルあり）</dd>
         </div>
         <div>
           <dt>お電話</dt>
-          <dd><a href="tel:05017939945" style="color:inherit;">050-1793-9945</a>（10:00 – 21:00）</dd>
+          <dd><a href="tel:05017939945" style="color:inherit;">050-1793-9945</a>（受付 8:00 – 22:00）</dd>
         </div>
       </dl>
     </div>
 
-    <form class="reserve-form" id="reserve-form" novalidate>
-      <!-- Success state (hidden by default) -->
-      <div class="form-success" id="form-success" style="display:none;">
-        <div class="success-mark">✓</div>
-        <h3>ご予約を受け付けました</h3>
-        <p>確認メールをお送りしました。<br>担当より2営業日以内にご連絡いたします。</p>
-        <button type="button" class="btn-ghost dark" id="form-reset">もう一度入力する</button>
+    <div class="line-cta">
+      <div class="line-card">
+        <div class="line-badge">
+          <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 5.74 2 10.36c0 4.13 3.55 7.59 8.36 8.25.32.07.77.21.88.49.1.25.06.65.03.9l-.14.86c-.04.25-.2.99.87.54 1.07-.45 5.76-3.39 7.86-5.81C21.4 14.13 22 12.32 22 10.36 22 5.74 17.52 2 12 2Z" />
+          </svg>
+        </div>
+        <h3>公式LINEで予約・相談</h3>
+        <p>友だち追加して、トークから<br>体験のご希望をお送りください。</p>
+        <a href="https://line.me/R/ti/p/@966vjtii?oat_content=url&ts=04122017" target="_blank" rel="noopener noreferrer" class="btn-line">
+          <span class="line-mark">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 5.74 2 10.36c0 4.13 3.55 7.59 8.36 8.25.32.07.77.21.88.49.1.25.06.65.03.9l-.14.86c-.04.25-.2.99.87.54 1.07-.45 5.76-3.39 7.86-5.81C21.4 14.13 22 12.32 22 10.36 22 5.74 17.52 2 12 2Z" />
+            </svg>
+          </span>
+          <span>LINEで体験を予約する</span>
+        </a>
+        <small class="line-note">＠966vjtii ／ タップで友だち追加</small>
       </div>
-
-      <!-- Form fields -->
-      <div id="form-fields">
-        <div class="form-row">
-          <label for="f-name">お名前 <span class="req">必須</span></label>
-          <input type="text" id="f-name" name="name" placeholder="山田 花子" required />
-        </div>
-        <div class="form-row">
-          <label for="f-kana">フリガナ</label>
-          <input type="text" id="f-kana" name="kana" placeholder="ヤマダ ハナコ" />
-        </div>
-        <div class="form-2col">
-          <div class="form-row">
-            <label for="f-email">メール <span class="req">必須</span></label>
-            <input type="email" id="f-email" name="email" placeholder="you@example.com" required />
-          </div>
-          <div class="form-row">
-            <label for="f-phone">電話 <span class="req">必須</span></label>
-            <input type="tel" id="f-phone" name="phone" placeholder="090-0000-0000" required />
-          </div>
-        </div>
-        <div class="form-2col">
-          <div class="form-row">
-            <label for="f-date">ご希望日 <span class="req">必須</span></label>
-            <input type="date" id="f-date" name="date" required />
-          </div>
-          <div class="form-row">
-            <label for="f-program">体験プログラム</label>
-            <select id="f-program" name="program">
-              <option value="BASIC">ベーシック</option>
-              <option value="POSTURE">姿勢改善</option>
-              <option value="DIET">ボディメイク</option>
-              <option value="POSTNATAL">産後ケア</option>
-              <option value="RELAX">リラックス</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <label for="f-note">ご質問・ご要望</label>
-          <textarea id="f-note" name="note" rows="3" placeholder="ご不明点があればご記入ください"></textarea>
-        </div>
-        <label class="form-check">
-          <input type="checkbox" id="f-agree" name="agree" />
-          <span>プライバシーポリシーに同意する</span>
-        </label>
-        <button type="submit" class="btn-primary block disabled" id="form-submit">
-          予約を送信する <span class="btn-arrow">→</span>
-        </button>
-      </div>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -1927,7 +2243,7 @@ p { margin: 0; }
 
 <!-- ===== Floating CTA ===== -->
 <a href="#reserve" class="float-cta" id="float-cta">
-  <span>体験予約</span>
+  <span>体験を相談する</span>
   <span>→</span>
 </a>
 
@@ -1972,36 +2288,7 @@ window.addEventListener('scroll', () => {
   floatCta.classList.toggle('show', window.scrollY > 600);
 }, { passive: true });
 
-// ===== Form Validation =====
-const form = document.getElementById('reserve-form');
-const submitBtn = document.getElementById('form-submit');
-const agreeCheck = document.getElementById('f-agree');
-const requiredFields = ['f-name', 'f-email', 'f-phone', 'f-date'];
-
-function checkValidity() {
-  const allFilled = requiredFields.every(id => document.getElementById(id).value.trim());
-  const agreed = agreeCheck.checked;
-  submitBtn.classList.toggle('disabled', !(allFilled && agreed));
-}
-
-requiredFields.forEach(id => {
-  document.getElementById(id).addEventListener('input', checkValidity);
-});
-agreeCheck.addEventListener('change', checkValidity);
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  if (submitBtn.classList.contains('disabled')) return;
-  document.getElementById('form-fields').style.display = 'none';
-  document.getElementById('form-success').style.display = 'flex';
-});
-
-document.getElementById('form-reset').addEventListener('click', () => {
-  form.reset();
-  checkValidity();
-  document.getElementById('form-fields').style.display = '';
-  document.getElementById('form-success').style.display = 'none';
-});
+// (Form replaced by LINE CTA — no form validation needed)
 </script>
 </body>
 </html>
